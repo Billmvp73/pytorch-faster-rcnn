@@ -20,7 +20,7 @@ import sys
 from nets.vgg16 import vgg16
 from nets.resnet_v1 import resnetv1
 from nets.mobilenet_v1 import mobilenetv1
-
+from nets.unsup_video import unsup_video
 def parse_args():
   """
   Parse input arguments
@@ -130,6 +130,8 @@ if __name__ == '__main__':
     net = resnetv1(num_layers=152)
   elif args.net == 'mobile':
     net = mobilenetv1()
+  elif args.net == 'unsup_video':
+    net = unsup_video()
   else:
     raise NotImplementedError
     

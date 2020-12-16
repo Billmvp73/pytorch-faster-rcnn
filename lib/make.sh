@@ -1,3 +1,4 @@
+export PATH="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/bin"
 CUDA_ARCH="-gencode arch=compute_30,code=sm_30 \
            -gencode arch=compute_35,code=sm_35 \
            -gencode arch=compute_50,code=sm_50 \
@@ -9,7 +10,7 @@ CUDA_ARCH="-gencode arch=compute_30,code=sm_30 \
 # Build RoiPooling module
 cd layer_utils/roi_pooling/src/cuda
 echo "Compiling roi_pooling kernels by nvcc..."
-nvcc -c -o roi_pooling_kernel.cu.o roi_pooling_kernel.cu -x cu -Xcompiler -fPIC $CUDA_ARCH 
+"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -c -o roi_pooling_kernel.cu.o roi_pooling_kernel.cu -x cu -Xcompiler -fPIC $CUDA_ARCH 
 cd ../../
 python build.py
 cd ../../

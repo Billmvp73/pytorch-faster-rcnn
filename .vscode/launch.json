@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--weight", "data/imagenet_weights/unsup_video.pth", "--imdb", "voc_2007_trainval", "--imdbval" ,"voc_2007_test", "--tag", "layer_11", "--iters", "70000", "--cfg", "experiments/cfgs/unsup_video.yml", "--net", "unsup_video", "--set", "ANCHOR_SCALES", "[8,16,32]","ANCHOR_RATIOS", "[0.5,1,2]", "TRAIN.STEPSIZE", "[50000]"
+            ]
+            // "args": [
+            //     "--model", "output/unsupAlex/voc_2007_trainval/default/unsupAlex_faster_rcnn_iter_70000.pth", "--imdb", "voc_2007_test", "--cfg", "experiments/cfgs/unsupAlex.yml", "--net", "unsupAlex", "--set", "ANCHOR_SCALES", "[8,16,32]","ANCHOR_RATIOS", "[0.5,1,2]", "TRAIN.STEPSIZE", "[50000]"
+            // ]
+        }
+    ]
+}
